@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +42,82 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.puppy-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.puppy-list p {
+  border: 2px solid #ff9f80;
+  /* Unique warm color border */
+  padding: 1em;
+  margin: 0.5em;
+  border-radius: 8px;
+}
+
+.featured-puppy {
+  background-color: #ffe57f;
+  /* Unique warm background color */
+  padding: 1em;
+  margin-top: 2em;
+}
+
+.featured-puppy h2 {
+  color: #af4034;
+  /* Unique warm header color */
+}
+
+.featured-puppy ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.featured-puppy li {
+  margin-bottom: 0.5em;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #ffcb7f, 0 0 20px #ffcb7f, 0 0 30px #ffcb7f, 0 0 40px #ffcb7f, 0 0 50px #ffcb7f, 0 0 60px #ffcb7f, 0 0 70px #ffcb7f;
+  }
+
+  50% {
+    text-shadow: 0 0 20px #ffcb7f, 0 0 30px #ffcb7f, 0 0 40px #ffcb7f, 0 0 50px #ffcb7f, 0 0 60px #ffcb7f, 0 0 70px #ffcb7f, 0 0 80px #ffcb7f;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #ffcb7f, 0 0 20px #ffcb7f, 0 0 30px #ffcb7f, 0 0 40px #ffcb7f, 0 0 50px #ffcb7f, 0 0 60px #ffcb7f, 0 0 70px #ffcb7f;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  color: #ffcb7f;
+  animation: glow 2s infinite alternate;
+  -webkit-text-stroke: 2px black;
+  /* For webkit browsers */
+  text-stroke: 2px black;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+body {
+  animation: backgroundAnimation 20s linear infinite;
+  background: linear-gradient(45deg, #000000, #bcb0f1, #007bff);
+  background-size: 200% 200%;
 }

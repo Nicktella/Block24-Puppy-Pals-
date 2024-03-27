@@ -16,7 +16,7 @@ function App() { // Renamed App to Main
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Block 24 (Puppy Pals)</h1>
       <div className="card"></div>
       <div className="puppy-list">
         {puppies.map((puppy) => (
